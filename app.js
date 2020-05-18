@@ -1,8 +1,10 @@
 const express = require('express')
 const exphdbs = require('express-handlebars')
 const app = express()
-const routes = require('./routes')
 require('./configs/mongoose')
+const Record = require('./models/Record')
+const Category = require('./models/Record')
+const routes = require('./routes')
 const PORT = process.env.PORT || 3000
 
 app.engine('handlebars', exphdbs({ defaultLayout: 'main' }))
