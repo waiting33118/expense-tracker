@@ -7,3 +7,5 @@ mongoose.connect('mongodb://localhost/Expense', {
 const db = mongoose.connection
 db.on('error', () => console.error('Connection Error!'))
 db.once('open', () => console.log('Database Connected!'))
+
+module.exports = db
