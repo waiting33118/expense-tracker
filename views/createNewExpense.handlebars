@@ -1,0 +1,29 @@
+<div class="container d-flex flex-column flex-nowrap align-items-center mt-4">
+  <h3>請輸入你的支出</h3>
+  <h6 class="align-self-start ml-5"><span style="color: red;">*</span>必填欄位</h6>
+  {{!-- 表單 --}}
+  <form action="/expense/new" method="POST">
+    <div class="form-group mt-4">
+      <div class="row">
+        <div class="col-auto d-flex align-items-center">
+          <label for="expenseName" class="m-0">名稱<span style="color: red;">*</span> :</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="name" id="expenseName" placeholder="消費名稱..." class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="form-group mt-4">
+      <div class="row">
+        <div class="col-auto d-flex align-items-center">
+          <label for="expenseDate" class="m-0">日期<span style="color: red;">*</span> :</label>
+        </div>
+        <div class="col-auto">
+          <input type="date" name="date" id="expenseDate" class="form-control">
+        </div>
+      </div>
+    </div>
+
+
+  </form>
+</div>
