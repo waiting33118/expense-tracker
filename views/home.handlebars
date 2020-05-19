@@ -1,5 +1,46 @@
-<div class="container">
-  <div class="alert alert-primary" role="alert">
-    A simple primary alert—check it out!
+<div class="container d-flex flex-nowrap flex-column align-items-center mt-3">
+
+  {{!-- 篩選類別Filter --}}
+  <div class="input-group mb-3" style="width: 250px;">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Filter</label>
+    </div>
+    <select class="custom-select" id="inputGroupSelect01">
+      <option selected>類別...</option>
+      {{#each category}}
+      <option>{{this.category}}</option>
+      {{/each}}
+    </select>
   </div>
+
+  {{!-- 總金額totalAmount  --}}
+  <div class="d-flex flex-column align-items-center flex-nowrap mt-2">
+    <h3>總金額</h3>
+    <span class="badge badge-pill badge-primary px-5 py-2">
+      <h2 class="p-0 m-0">NTD$ 62548</h2>
+    </span>
+  </div>
+
+  {{!-- 花費細項Detail --}}
+  <table class="table table-hover mt-3">
+    <thead>
+      <tr>
+        <th scope="col">類別</th>
+        <th scope="col">消費名稱</th>
+        <th scope="col">消費日期</th>
+        <th scope="col">消費金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each record}}
+      <tr>
+        <th scope="row">1</i></th>
+        <td>{{this.name}}</td>
+        <td>{{this.date}}</td>
+        <td>{{this.amount}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
 </div>
