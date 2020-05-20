@@ -9,7 +9,7 @@
           <label for="expenseName" class="m-0">名稱<span style="color: red;">*</span> :</label>
         </div>
         <div class="col-auto">
-          <input type="text" name="name" id="expenseName" placeholder="消費名稱..." class="form-control">
+          <input type="text" name="name" id="expenseName" placeholder="消費名稱..." class="form-control" required>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
           <label for="expenseDate" class="m-0">日期<span style="color: red;">*</span> :</label>
         </div>
         <div class="col-auto">
-          <input type="date" name="date" id="expenseDate" class="form-control">
+          <input type="date" name="date" id="expenseDate" class="form-control" required>
         </div>
       </div>
     </div>
@@ -30,8 +30,7 @@
         </div>
         <div class="col-auto">
           <div class="input-group">
-            <select class="form-control" id="expenseCategory" name="category">
-              <option value="" selected>選擇類別...</option>
+            <select class="form-control" id="expenseCategory" name="category" required>
               {{#each category}}
               <option value="{{this}}">{{this}}</option>
               {{/each}}
@@ -39,7 +38,16 @@
           </div>
         </div>
       </div>
-
+      <div class="form-group mt-4">
+        <div class="row">
+          <div class="col-auto d-flex align-items-center">
+            <label for="expenseAmount" class="m-0">金額<span style="color: red;">*</span> :</label>
+          </div>
+          <div class="col-auto">
+            <input type="number" name="amount" id="expenseAmount" class="form-control" min="0" step="100" required>
+          </div>
+        </div>
+      </div>
     </div>
 
     <button type="submit" class="btn btn-outline-primary btn-block rounded-pill align-self-center">新增支出</button>
