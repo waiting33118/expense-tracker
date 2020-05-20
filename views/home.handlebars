@@ -24,23 +24,33 @@
   <table class="table table-hover mt-3">
     <thead>
       <tr>
-        <th scope="col">類別</th>
-        <th scope="col">消費名稱</th>
-        <th scope="col">消費日期</th>
-        <th scope="col">消費金額</th>
+        <th style="text-align: center;" scope="col">類別</th>
+        <th style="text-align: center;" scope="col">消費名稱</th>
+        <th style="text-align: center;" scope="col">消費日期</th>
+        <th style="text-align: center;" scope="col">消費金額</th>
+        <th style="text-align: center;" scope="col">操作</th>
       </tr>
     </thead>
     <tbody>
       {{#each record}}
       <tr>
-        <th scope="row">{{{this.category}}}</i></th>
-        <td>{{this.name}}</td>
-        <td>{{this.date}}</td>
-        <td>{{this.amount}}</td>
+        <th style="text-align: center;" scope="row">{{{this.category}}}</i></th>
+        <td style="text-align: center;">{{this.name}}</td>
+        <td style="text-align: center;">{{this.date}}</td>
+        <td style="text-align: center;">{{this.amount}}</td>
+        <td style="text-align: center;">
+          <a class="link mr-2" href="/expense/{{this._id}}/edit"><i class="far fa-edit" id="edit-icon"
+              style="font-size: 1.5rem;"></i>
+          </a>
+          <a class="link" href="/expense/{{this._id}}?_method=DELETE">
+            <i class="far fa-trash-alt" id="delete-icon" style="font-size: 1.5rem;">
+            </i>
+          </a>
+        </td>
       </tr>
       {{/each}}
       <tr>
-        <td class="text-center" colspan="4">
+        <td class="text-center" colspan="5">
           <form action="/expense/new" method="GET">
             <button type="submit" class="btn btn-outline-warning" style="width: 200px;">新增支出</button>
           </form>
