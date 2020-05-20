@@ -5,3 +5,12 @@
 .navbar {
 	box-shadow: 3px 3px 5px 6px #ccc;
 }
+
+#edit-icon:hover {
+	cursor: pointer;
+	color: orange;
+}
+#delete-icon:hover {
+	cursor: pointer;
+	color: red;
+}
