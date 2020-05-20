@@ -5,7 +5,12 @@ const category = ['家居物業', '交通出行', '休閒娛樂', '餐飲食品'
 
 //新增記帳
 router.get('/new', (req, res) => {
-	res.render('createNewExpense')
+	res.render('createNewExpense', { category })
+})
+
+//接收新增記帳表單
+router.post('/new', (req, res) => {
+	console.log(req.body)
 })
 
 module.exports = router
