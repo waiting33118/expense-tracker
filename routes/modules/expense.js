@@ -47,4 +47,11 @@ router.put('/:_id', (req, res) => {
 	})
 })
 
+//處理觸發-刪除記帳
+router.delete('/:_id', (req, res) => {
+	const id = req.params._id
+	Record.findById(id).then((record) => record.remove())
+	res.redirect('/')
+})
+
 module.exports = router
