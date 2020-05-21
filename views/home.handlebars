@@ -1,15 +1,19 @@
 <div class="container d-flex flex-nowrap flex-column align-items-center mt-4">
   {{!-- 篩選類別Filter --}}
-  <div class="input-group mb-3" style="width: 250px;">
-    <div class="input-group-prepend">
-      <label class="input-group-text" for="inputGroupSelect01">Filter</label>
+  <div class="filter d-flex flex-nowrap justify-content-center">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Filter</label>
+      </div>
+      <form action="/category" method="GET">
+        <select class="custom-select" onchange="submit()" name="filter" id="inputGroupSelect01"
+          style="width: 200px;">123
+          {{#each category}}
+          <option value="{{this}}">{{this}}</option>
+          {{/each}}
+        </select>
+      </form>
     </div>
-    <select class="custom-select" id="inputGroupSelect01">
-      <option selected>類別...</option>
-      {{#each category}}
-      <option>{{this}}</option>
-      {{/each}}
-    </select>
   </div>
 
   {{!-- 總金額totalAmount  --}}
@@ -44,7 +48,7 @@
                 style="font-size: 1.5rem;"></i>
             </a>
             <form action="/expense/{{this._id}}?_method=DELETE" method="post" onsubmit="return confirmDelete()">
-              <button type="submit" class="btn btn-link m-0 p-0">
+              <button type="submit" class="btn btn-link m-0 p-0" style="border: none; text-decoration:none">
                 <i class="far fa-trash-alt" id="delete-icon" style="font-size: 1.5rem;">
                 </i>
               </button>
