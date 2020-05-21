@@ -39,13 +39,17 @@
         <td style="text-align: center;">{{this.date}}</td>
         <td style="text-align: center;">{{this.amount}}</td>
         <td style="text-align: center;">
-          <a class="link mr-2" href="/expense/{{this._id}}/edit"><i class="far fa-edit" id="edit-icon"
-              style="font-size: 1.5rem;"></i>
-          </a>
-          <a class="link" href="/expense/{{this._id}}?_method=DELETE">
-            <i class="far fa-trash-alt" id="delete-icon" style="font-size: 1.5rem;">
-            </i>
-          </a>
+          <div class="d-flex flex-nowrap justify-content-center">
+            <a class="link mr-2" href="/expense/{{this._id}}/edit"><i class="far fa-edit" id="edit-icon"
+                style="font-size: 1.5rem;"></i>
+            </a>
+            <form action="/expense/{{this._id}}?_method=DELETE" method="post" onsubmit="return confirmDelete()">
+              <button type="submit" class="btn btn-link m-0 p-0">
+                <i class="far fa-trash-alt" id="delete-icon" style="font-size: 1.5rem;">
+                </i>
+              </button>
+            </form>
+          </div>
         </td>
       </tr>
       {{/each}}
