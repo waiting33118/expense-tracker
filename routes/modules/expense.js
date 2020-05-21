@@ -26,7 +26,25 @@ router.get('/:_id/edit', (req, res) => {
 	const id = req.params._id
 	Record.findById(id)
 		.lean()
-		.then((record) => res.render('editExpense', { record, category }))
+		.then((record) => {
+			const sortedCategory = category.filter((item) => item !== record.category)
+			sortedCategory.unshift(record.category)
+			res.render('editExpense', { record, sortedCategory })
+		})
+})
+
+//處理表單-修改記帳
+router.put('/:_id', (req, res) => {
+	const { name, date, category, amount } = req.body
+	const id = req.params._id
+	Record.findById(id).then((record) => {
+		record.name = name
+		record.date = date
+		record.category = category
+		record.amount = amount
+		record.save()
+		res.redirect('/')
+	})
 })
 
 module.exports = router

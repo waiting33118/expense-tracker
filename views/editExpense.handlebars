@@ -2,7 +2,8 @@
   <h3>請修改你的支出</h3>
   <h6 class="align-self-start ml-5"><span style="color: red;">*</span>必填欄位</h6>
   {{!-- 表單 --}}
-  <form action="/expense/{{record._id}}" method="POST" class="d-flex flex-column flex-nowrap align-items-start">
+  <form action="/expense/{{record._id}}?_method=PUT" method="POST"
+    class="d-flex flex-column flex-nowrap align-items-start">
     <div class="form-group mt-4">
       <div class="row">
         <div class="col-auto d-flex align-items-center">
@@ -32,7 +33,7 @@
         <div class="col-auto">
           <div class="input-group">
             <select class="form-control" id="expenseCategory" name="category" required>
-              {{#each category}}
+              {{#each sortedCategory}}
               <option value="{{this}}">{{this}}</option>
               {{/each}}
             </select>
