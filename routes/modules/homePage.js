@@ -3,6 +3,7 @@ const router = express.Router()
 const Record = require('../../models/Record')
 const category = ['家居物業', '交通出行', '休閒娛樂', '餐飲食品', '其他']
 
+//渲染首頁
 router.get('/', (req, res) => {
 	Record.find()
 		.sort('_id')
