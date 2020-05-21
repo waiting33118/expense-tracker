@@ -31,20 +31,23 @@ router.get('/:_id/edit', (req, res) => {
 			sortedCategory.unshift(record.category)
 			res.render('editExpense', { record, sortedCategory })
 		})
+		.catch((err) => console.log(err))
 })
 
 //處理表單-修改記帳
 router.put('/:_id', (req, res) => {
 	const { name, date, category, amount } = req.body
 	const id = req.params._id
-	Record.findById(id).then((record) => {
-		record.name = name
-		record.date = date
-		record.category = category
-		record.amount = amount
-		record.save()
-		res.redirect('/')
-	})
+	Record.findById(id)
+		.then((record) => {
+			record.name = name
+			record.date = date
+			record.category = category
+			record.amount = amount
+			record.save()
+			res.redirect('/')
+		})
+		.catch((err) => console.log(err))
 })
 
 //處理觸發-刪除記帳
