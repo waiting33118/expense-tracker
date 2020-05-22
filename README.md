@@ -2,18 +2,16 @@
 
 這是一個使用 Mongodb + Express + Node.js 所打造的家庭記帳本網站
 
-####作品連結
+**作品連結**
 
 [pica](https://nodeca.github.io/pica/demo/)
 
 ## 專案畫面
 
-####首頁
-
+**首頁**
 ![專案畫面](/public/images/project_screenshot.png)
 
-####新增頁面
-
+**新增頁面**
 ![專案畫面](/public/images/project_screenshot2.png)
 
 ## 安裝&使用
