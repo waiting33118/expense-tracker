@@ -29,7 +29,6 @@ router.get('/', (req, res) => {
 //篩選器
 router.get('/category', (req, res) => {
 	const filterValue = req.query.filter
-	console.log(filterValue)
 
 	Record.find({ category: `${filterValue}` })
 		.sort('_id')
