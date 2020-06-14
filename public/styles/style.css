@@ -1,16 +1,85 @@
 * {
-	font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .navbar {
-	box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 #edit-icon:hover {
-	cursor: pointer;
-	color: orange;
+  cursor: pointer;
+  color: orange;
 }
 #delete-icon:hover {
-	cursor: pointer;
-	color: red;
+  cursor: pointer;
+  color: red;
+}
+
+input[name='email'] {
+  transition: 1.2s;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 0;
+}
+
+input[name='password'] {
+  transition: 1.2s;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 0;
+}
+
+input[name='confirmPassword'] {
+  transition: 1.2s;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 0;
+}
+
+input[name='name'] {
+  transition: 1.2s;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 0;
+}
+
+input[name='email']:focus {
+  transition: 1.2s;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 18px;
+}
+
+input[name='password']:focus {
+  transition: 1.2s;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 18px;
+}
+
+input[name='confirmPassword']:focus {
+  transition: 1.2s;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 18px;
+}
+
+input[name='name']:focus {
+  transition: 1.2s;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 18px;
+}
+
+#loginButton:hover {
+  transition: 0.8s;
+  box-shadow: 0 0 20px rgba(43, 255, 0, 0.336);
 }
