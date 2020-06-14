@@ -1,6 +1,6 @@
 # 家庭記帳本
 
-這是一個使用 Mongodb + Express + Node.js 所打造的家庭記帳本網站
+這是一個使用 Mongodb + Express + Node.js + Passport 所打造的家庭記帳本網站
 
 **作品連結**
 
@@ -8,11 +8,17 @@
 
 ## 專案畫面
 
-**首頁**
-![專案畫面](/public/images/project_screenshot.png)
+**登入畫面/LoginPage**
+![專案畫面](/public/images/project_screenshot1.png)
 
-**新增頁面**
+**註冊畫面/RegisterPage**
 ![專案畫面](/public/images/project_screenshot2.png)
+
+**首頁/MainPage**
+![專案畫面](/public/images/project_screenshot3.png)
+
+**修改畫面/EditPage**
+![專案畫面](/public/images/project_screenshot4.png)
 
 ## 安裝&使用
 
@@ -46,22 +52,39 @@ npm run dev
 npm start
 ```
 
+#### 預設測試帳號 Default Testing Account
+
+```
+   email:  test1@gmail.com
+password:  123456
+   email:  test2@gmail.com
+password:  123456
+```
+
 ## 環境建置
 
-- Node.js v12.16.3 -執行環境
-- Express V4.17.1 -框架
-- Express-handlebars V4.0.4 -模板引擎
-- Body-Parser V1.19.0 -解析 POST 資料
-- Method-Override V3.0.0 改寫 POST Method
-- Mongoose V5.9.14 -mongoDB ODM
+```
+"bcryptjs": "^2.4.3",
+"body-parser": "^1.19.0",
+"connect-flash": "^0.1.1",
+"dotenv": "^8.2.0",
+"express": "^4.17.1",
+"express-handlebars": "^4.0.4",
+"express-session": "^1.17.1",
+"method-override": "^3.0.0",
+"mongoose": "^5.9.14",
+"passport": "^0.4.1",
+"passport-local": "^1.0.0"
+```
 
 ## 產品功能(User Story)
 
-- 使用者可以瀏覽所有支出以及消費總額
+- 使用者可以瀏覽自己所有的支出以及消費總額
 - 使用者可以**新增**單筆花費紀錄
 - 使用者可以**修改**記帳紀錄
 - 使用者可以**刪除**記帳紀錄
-- 使用者可以使用**篩選器**查看**各類別**的消費紀錄與總額
+- 使用者可以使用**篩選器**查看**各類別**和**各月份**的消費紀錄與總額
+- 遊客必須先註冊帳號才可使用此服務
 
 ## Contributor
 
