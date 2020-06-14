@@ -1,24 +1,31 @@
 <div class="container d-flex flex-nowrap flex-column align-items-center mt-4">
   {{!-- 篩選類別Filter --}}
-  <div class="filter d-flex flex-nowrap justify-content-center">
-    <div class="input-group mb-3">
+  <form action="/filter" method="GET" class="form-inline mb-3">
+    <div class="input-group d-flex flex-nowrap mr-3 mb-2 mb-sm-0">
       <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">Filter</label>
+        <label class="input-group-text" for="inputGroupSelect01">類別</label>
       </div>
-      <form action="/category" method="GET">
-        <select class="custom-select" onchange="submit()" name="filter" id="inputGroupSelect01"
-          style="width: 200px;">123
-          {{#each category}}
-          <option value="{{this}}">{{this}}</option>
-          {{/each}}
-        </select>
-      </form>
+      <select class="custom-select" onchange="submit()" name="category" id="inputGroupSelect01" style="width: 120px;">
+        {{#each categoryItems}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
     </div>
-  </div>
+    <div class="input-group d-flex flex-nowrap">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect02">月份</label>
+      </div>
+      <select class="custom-select" onchange="submit()" name="month" id="inputGroupSelect02" style="width: 120px;">
+        {{#each monthItems}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </form>
 
   {{!-- 總金額totalAmount  --}}
   <div class="d-flex flex-column align-items-center flex-nowrap mt-2">
-    <h3>總金額</h3>
+    <h3>花費總金額</h3>
     <span class="badge badge-pill badge-primary px-5 py-2">
       <h2 class="p-0 m-0">NTD$ {{totalAmount}}</h2>
     </span>
@@ -29,6 +36,7 @@
     <thead>
       <tr>
         <th style="text-align: center;" scope="col">類別</th>
+        <th style="text-align: center;" scope="col">商家</th>
         <th style="text-align: center;" scope="col">消費名稱</th>
         <th style="text-align: center;" scope="col">消費日期</th>
         <th style="text-align: center;" scope="col">消費金額</th>
@@ -38,7 +46,8 @@
     <tbody>
       {{#each record}}
       <tr>
-        <th style="text-align: center;" scope="row">{{{this.category}}}</i></th>
+        <td style="text-align: center;" scope="row">{{{this.category}}}</i></td>
+        <td style="text-align: center;">{{this.merchant}}</td>
         <td style="text-align: center;">{{this.name}}</td>
         <td style="text-align: center;">{{this.date}}</td>
         <td style="text-align: center;">{{this.amount}}</td>
@@ -58,7 +67,7 @@
       </tr>
       {{/each}}
       <tr>
-        <td class="text-center" colspan="5">
+        <td class="text-center" colspan="6">
           <form action="/expense/new" method="GET">
             <button type="submit" class="btn btn-outline-warning" style="width: 200px;">新增支出</button>
           </form>
