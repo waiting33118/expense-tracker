@@ -1,52 +1,130 @@
 {
-	"results": [
-		{
-			"name": "早餐",
-			"category": "餐飲食品",
-			"date": "2020-05-01",
-			"amount": 250
-		},
-		{
-			"name": "午餐",
-			"category": "餐飲食品",
-			"date": "2020-05-02",
-			"amount": 100
-		},
-		{
-			"name": "晚餐",
-			"category": "餐飲食品",
-			"date": "2020-05-04",
-			"amount": 300
-		},
-		{
-			"name": "買沙發",
-			"category": "家居物業",
-			"date": "2020-05-03",
-			"amount": 10000
-		},
-		{
-			"name": "高鐵",
-			"category": "交通出行",
-			"date": "2020-05-10",
-			"amount": 2399
-		},
-		{
-			"name": "看復仇者聯盟",
-			"category": "休閒娛樂",
-			"date": "2020-05-13",
-			"amount": 699
-		},
-		{
-			"name": "電話費用",
-			"category": "其他",
-			"date": "2020-05-15",
-			"amount": 399
-		},
-		{
-			"name": "信用卡費用",
-			"category": "其他",
-			"date": "2020-05-21",
-			"amount": 5864
-		}
-	]
+  "users": [
+    {
+      "name": "test1",
+      "email": "test1@gmail.com",
+      "password": "123456",
+      "records": [
+        {
+          "name": "早餐",
+          "merchant": "美而美",
+          "category": "餐飲食品",
+          "date": "2020-04-01",
+          "amount": 250
+        },
+        {
+          "name": "午餐",
+          "merchant": "萬丹牛肉麵",
+          "category": "餐飲食品",
+          "date": "2020-04-02",
+          "amount": 100
+        },
+        {
+          "name": "晚餐",
+          "merchant": "肯德基",
+          "category": "餐飲食品",
+          "date": "2020-04-04",
+          "amount": 300
+        },
+        {
+          "name": "買沙發",
+          "merchant": "沙發的世界",
+          "category": "家居物業",
+          "date": "2020-05-03",
+          "amount": 10000
+        },
+        {
+          "name": "高鐵",
+          "merchant": "台灣高鐵",
+          "category": "交通出行",
+          "date": "2020-05-10",
+          "amount": 2399
+        },
+        {
+          "name": "看復仇者聯盟",
+          "merchant": "威秀",
+          "category": "休閒娛樂",
+          "date": "2020-05-13",
+          "amount": 699
+        },
+        {
+          "name": "電話費用",
+          "merchant": "中華電信",
+          "category": "其他",
+          "date": "2020-05-15",
+          "amount": 399
+        },
+        {
+          "name": "信用卡費用",
+          "merchant": "中國信託",
+          "category": "其他",
+          "date": "2020-05-21",
+          "amount": 5864
+        }
+      ]
+    },
+    {
+      "name": "test2",
+      "email": "test2@gmail.com",
+      "password": "123456",
+      "records": [
+        {
+          "name": "早餐",
+          "merchant": "美而美",
+          "category": "餐飲食品",
+          "date": "2020-04-01",
+          "amount": 250
+        },
+        {
+          "name": "午餐",
+          "merchant": "萬丹牛肉麵",
+          "category": "餐飲食品",
+          "date": "2020-04-02",
+          "amount": 100
+        },
+        {
+          "name": "晚餐",
+          "merchant": "肯德基",
+          "category": "餐飲食品",
+          "date": "2020-04-04",
+          "amount": 300
+        },
+        {
+          "name": "買沙發",
+          "merchant": "沙發的世界",
+          "category": "家居物業",
+          "date": "2020-05-03",
+          "amount": 10000
+        },
+        {
+          "name": "高鐵",
+          "merchant": "台灣高鐵",
+          "category": "交通出行",
+          "date": "2020-05-10",
+          "amount": 2399
+        },
+        {
+          "name": "看復仇者聯盟",
+          "merchant": "威秀",
+          "category": "休閒娛樂",
+          "date": "2020-05-13",
+          "amount": 699
+        },
+        {
+          "name": "電話費用",
+          "merchant": "中華電信",
+          "category": "其他",
+          "date": "2020-05-15",
+          "amount": 399
+        },
+        {
+          "name": "信用卡費用",
+          "merchant": "中國信託",
+          "category": "其他",
+          "date": "2020-05-21",
+          "amount": 5864
+        }
+      ]
+    }
+  ]
 }
