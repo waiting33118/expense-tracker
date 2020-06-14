@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    crossorigin="anonymous">
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/980c0915be.js" crossorigin="anonymous"></script>
   <title>家庭記帳本</title>
 </head>
@@ -15,13 +15,23 @@
 <body>
   <header>
     <nav class="navbar navbar-light navbar-expand-md bg-light">
-      <div class=" container d-flex justify-content-center py-2">
+      <div class=" container-fluid d-flex justify-content-between align-items-center flex-nowrap py-2">
         <a href="/">
-          <div class="navbar-brand"><i class="fas fa-money-check-alt mr-2" style="color: coral;"></i>
+          <div class="navbar-brand justify-content-center"><i class="fas fa-money-check-alt mr-2"
+              style="color: coral;"></i>
             家庭記帳本
           </div>
         </a>
+        <div class="d-flex flex-nowrap">
+          {{#if isAuthenticated}}
+          <h4 class="my-auto mr-2">Hi,{{user.name}}</h4>
+          <a href="/users/logout" class="btn btn-outline-warning">登出</a>
+          {{else}}
+          <a href="/users/register" class="btn btn-outline-primary">註冊</a>
+          {{/if}}
+        </div>
       </div>
+
     </nav>
   </header>
 
